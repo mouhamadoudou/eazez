@@ -1,0 +1,21 @@
+.right-arrow {
+    position: absolute;
+    top: 70%;
+    right: 30px;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 70%;
+    left: 30px;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}

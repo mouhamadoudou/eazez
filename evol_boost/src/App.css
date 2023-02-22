@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css2?family=Nova+Round&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Varela+Round&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap);
+
+:root {
+  --clr-pri: #ae004e;
+  --clr-sec: #225e77;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  scroll-snap-type: y mandatory;
+}
+
+.bg {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.bg img {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+}

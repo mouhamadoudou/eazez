@@ -1,0 +1,370 @@
+.collection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80vw;
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
+
+.collection h1 {
+  color: #fff;
+  font-size: 30px;
+  margin-top: 10px;
+  opacity: 0;
+  position: relative;
+}
+
+.collection.active h1 {
+  animation: show 1s ease 0.5s forwards;
+}
+
+.collection h1 span {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: linear-gradient(25deg, var(--clr-pri), var(--clr-sec));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Varela Round, sans-serif;
+  height: 0;
+}
+
+.collection.active h1 span {
+  animation: animate-collection 1s ease 1.5s forwards;
+}
+
+@keyframes animate-collection {
+  to {
+    height: 38px;
+  }
+}
+
+.collection h1 span:before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  border-radius: 100px;
+  background: linear-gradient(25deg, var(--clr-pri), var(--clr-sec));
+}
+
+.collection.active h1 span:before {
+  animation: expand 1.1s ease 0.6s forwards;
+}
+
+.collection .collections-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+  max-height: 80vh;
+  max-width: 100%;
+  opacity: 0;
+}
+
+.collection.active .collections-container {
+  animation: show 1s ease 1.8s forwards;
+}
+
+.collections-container .cl-row {
+  align-items: flex-start;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.527);
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+  overflow-x: scroll;
+  padding: 15px 10px;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  height: 0;
+}
+
+.collections-container .cl-row .nft {
+  align-items: center;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  background-color: hsla(0, 0%, 100%, 0.562);
+  border: 2px solid hsla(0, 0%, 100%, 0.418);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  height: 90px;
+  min-width: 90px;
+  justify-content: center;
+  margin-right: 15px;
+  position: relative;
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  transition: 0.2s ease;
+}
+
+.collections-container .cl-row .nft:hover {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+
+.collections-container .cl-row.row1 .nft {
+  background: url(../props/wilder-walking.png);
+  background-position: center;
+  background-size: cover;
+}
+.collections-container .cl-row.row2 .nft {
+  background: url(../props/galaxy-nft.jpg);
+  background-position: 50%;
+  background-size: cover;
+}
+.collections-container .cl-row.row3 .nft {
+  background: url(../props/nft.png);
+  background-position: 50%;
+  background-size: cover;
+}
+.collections-container .cl-row.row4 .nft {
+  background: url(../props/pyramid-nft.jpg);
+  background-position: 50%;
+  background-size: cover;
+}
+img {
+  width: 25vw;
+  transition: 0.5s;
+}
+
+/* e-commerce */
+
+.textBox{
+  text-align:center;
+  color: white;
+  position: absolute;
+  bottom: 70%;
+  left: 7%;
+  font-family: 'Kanit', sans-serif;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(50deg, var(--clr-pri), var(--clr-sec));
+  border-image-slice: 1;
+  font-size: 1.2vw;
+}
+
+.e-commerce {
+  position: absolute;
+  top: 34%;
+  left: 0%;
+}
+
+.e-commerce_description {
+  position: absolute;
+  left: 10%;
+  bottom: 45%;
+  font-size: 1.3vw;
+  font-family: 'Kanit', sans-serif;
+  visibility: hidden;
+  color: white;
+}
+
+.e-commerce:hover {
+  z-index: 10;
+}
+
+.e-commerce:hover .e-commerce_description{
+  visibility: visible;
+}
+
+.e-commerce:hover .exemple_site {
+  width: 28vw;
+  transition: 0.5s;
+  z-index: 9;
+  filter: blur(4px);
+  cursor: pointer;
+}
+
+/* Vitrine */
+
+.textBox2{
+  text-align:center;
+  color: white;
+  position: absolute;
+  bottom: 70%;
+  right: 44%;
+  font-family: 'Kanit', sans-serif;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(50deg, var(--clr-pri), var(--clr-sec));
+  border-image-slice: 1;
+  font-size: 1.5vw;
+}
+
+.vitrine {
+  position: absolute;
+  top: 34%;
+  left: 34.5%;
+}
+
+.vitrine_description {
+  position: absolute;
+  left: 10%;
+  bottom: 45%;
+  font-size: 1.3vw;
+  font-family: 'Kanit', sans-serif;
+  visibility: hidden;
+  color: white;
+}
+
+.vitrine:hover {
+  z-index: 10;
+}
+
+.vitrine:hover .vitrine_description{
+  visibility: visible;
+}
+
+.vitrine:hover .exemple_site2 {
+  width: 28vw;
+  transition: 0.5s;
+  z-index: 9;
+  filter: blur(4px);
+  cursor: pointer;
+}
+
+/* Application */
+
+.textBox3{
+  text-align:center;
+  color: white;
+  position: absolute;
+  bottom: 70%;
+  right: 10%;
+  font-family: 'Kanit', sans-serif;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(50deg, var(--clr-pri), var(--clr-sec));
+  border-image-slice: 1;
+  font-size: 1.6vw;
+}
+
+.application_description {
+  position: absolute;
+  left: 10%;
+  bottom: 45%;
+  font-size: 1.3vw;
+  font-family: 'Kanit', sans-serif;
+  visibility: hidden;
+  color: white;
+}
+
+.application {
+  position: absolute;
+  top: 34%;
+  right: 0%;
+}
+
+.application:hover {
+  z-index: 10;
+}
+
+.application:hover .application_description{
+  visibility: visible;
+  z-index: 9;
+}
+
+.application:hover .exemple_site3 {
+  width: 28vw;
+  transition: 0.5s;
+  z-index: 9;
+  filter: blur(3px);
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .collection {
+    align-items: center;
+    width: 100vw;
+  }
+
+  .collection h1 {
+    font-size: 18px;
+  }
+
+  img {
+    width: 60vw;
+  }
+
+  .textBox {
+    font-size: 2.5vw;
+    top: 10%;
+    left: 34%;
+  }
+
+  .e-commerce {
+    top: 15%;
+    left: 20%;
+  }
+
+  .e-commerce_description {
+    font-size: 3vw;
+  }
+
+  .e-commerce:hover .exemple_site {
+    width: 63vw;
+  }
+
+  .vitrine {
+    top: 40%;
+    left: 20%;
+  }
+
+  .textBox2 {
+    font-size: 3vw;
+    top: 37%;
+    left: 40%;
+  }
+
+  .vitrine_description {
+    font-size: 3vw;
+  }
+
+  .vitrine:hover .exemple_site2 {
+    width: 63vw;
+  }
+
+  .application {
+    top: 65%;
+    left: 20%;
+  }
+
+  .textBox3 {
+    font-size: 3.2vw;
+    top: 62%;
+    left: 10%;
+  }
+
+  .application_description {
+    font-size: 3vw;
+  }
+
+  .application:hover .exemple_site3 {
+    width: 63vw;
+  }
+
+  @keyframes animate-collection {
+    to {
+      height: 26px;
+    }
+  }
+
+  .collection .collections-container {
+    margin-top: 15px;
+    max-width: 97%;
+  }
+
+  .collections-container .cl-row .nft{
+    height: 70px;
+    min-width: 70px;
+  }
+}
